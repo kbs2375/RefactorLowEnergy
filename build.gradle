@@ -1,0 +1,49 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+plugins {
+    id 'java'
+    id 'org.jetbrains.intellij' version '0.3.2'
+}
+
+group 'com.datarankings.plugins.rle'
+version '1.0'
+
+apply plugin: 'idea'
+apply plugin: 'org.jetbrains.intellij'
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+intellij {
+    // 안드로이드스튜디오에서 플러그인을 설치하려면 안드로이드스튜디오의 현재
+    // IntelliJ 버전을 확인. 현재 2017.3.3 임 (최신버전 3.5는 안됨;비호환), 계속확인 후 버전 번호를 변경)
+    // https://developer.android.com/studio/releases/ <== 안드로이드스튜디오의 릴리즈(현재 Intellij 적용 버전 확인가능).
+    // a full list of IntelliJ IDEA releases please see https://www.jetbrains.com/intellij-repository/releases <== Intellij 버전.
+    version  'IC-2017.3.3'
+    plugins 'android'
+    pluginName 'Refactor Low Energy'
+    publish {
+        // uncomment followings if you want to automatically build and deploy your plugin to the JetBrains Plugin Repository
+        // but to do so, you will need to have already published the plugin to the plugin repository.
+        // pluginId 'YOUR_PLUGIN_ID'
+        // PLUGIN_ID 은 이미 등록한 플러그인의 URL에서 찾을 수 있음. 예) https://plugins.jetbrains.com/plugin/YOUR_PLUGIN_ID.
+    }
+}
+patchPluginXml {
+    changeNotes """
+      This plugin is for the energy-efficiency refactoring of mobile application<br>
+      Plugin for the developmemt of energy-effiency mobile application <br>
+      <em>Refactor Low Energy</em>"""
+}

@@ -1,0 +1,64 @@
+<idea-plugin>
+    <id>com.datarankings.plugins</id>
+    <name>RefactorLowEnergy</name>
+    <version>0.0.1</version>
+    <vendor email="gyunee@datarankings.com" url="http://www.datarankings.com">DataRankings</vendor>
+
+    <description><![CDATA[
+    This plugin is for the energy-efficiency refactoring of mobile application <br>
+    <em>Plugin for the developmemt of energy-efficiency mobile application </em>
+    ]]></description>
+
+    <change-notes><![CDATA[
+      Release 0.0.1: Initial release.<br>
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products
+       위 사이트에서 버전 숫자를 확인. 최신 버전 173임. 상위 버전은 아직 배포전임. 계속 확인 필요!!
+    -->
+    <idea-version since-build="162" until-build="173.*"/>
+
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+    <depends>com.intellij.modules.lang</depends>
+    <depends>org.jetbrains.android</depends> <!-- 안스에서 작동 확인-->
+
+
+    <extensions defaultExtensionNs="com.intellij" >
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <!--자바 클래스 작성할 때 반드시 패키지를 구성하고 클래스를 작성할 것! (안스에서 플러그인 작동 안함, 네임스페이스 문제로 판단됨.) -->
+    <actions>
+        <group class="com.datarankings.plugins.rle.RefactorLowEnergyActionGroup"
+               id="RefactorLowEnergyActionGroup" text="Low Energy..." description="Refactoring for energy-efficiency" popup="false" >
+
+            <group id="CurrentRLE" popup="true" text="Built-in Low energy...">
+                <!-- 기존 Refactor menu 레퍼런스 호출 -->
+                <reference id="Move" />
+                <reference id="Inline" />
+                <reference id="MemberPushDown" />
+                <reference id="MembersPullUp" />
+                <reference id="EncapsulateFields" />
+                <reference id="IntroduceParameterObject" />
+                <reference id="IntroduceVariable" />
+            </group>
+
+            <group id="NewRLE" popup="true" text="Refactor Low Energy (RLE)...">
+                <!-- 새로운 Refactor method를 위한 action 구성 -->
+                <action id="RefactorLowEnergy.method1" class="com.datarankings.plugins.rle.MethodA" text="_RefactorTest" description="RefactorTest" />
+                <action id="RefactorLowEnergy.method2" class="com.datarankings.plugins.rle.MethodB" text="_RefactorTest2" description="RefactorTest2" />
+
+
+
+            </group>
+
+            <separator />
+
+            <add-to-group group-id="RefactoringMenu4" relative-to-action="Generify" anchor="before"   />
+        </group>
+    </actions>
+</idea-plugin>
