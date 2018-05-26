@@ -8,7 +8,7 @@ import com.intellij.openapi.ui.Messages;
 import com.intellij.pom.Navigatable;
 
 
-public class MethodB extends AnAction {
+public class ChangeReferenceToValue extends AnAction {
 
     @Override
     public void actionPerformed(AnActionEvent anActionEvent) {
@@ -16,7 +16,7 @@ public class MethodB extends AnAction {
         Navigatable navigatable = anActionEvent.getData(CommonDataKeys.NAVIGATABLE);
 
         if (project != null && navigatable != null) {
-            String txt = Messages.showInputDialog(project, "What is your name?", "Input your name", Messages.getQuestionIcon());
+            String txt = Messages.showInputDialog(project, "What is your name?", "Input Your Name", Messages.getQuestionIcon());
             Messages.showMessageDialog(project, "Hello, " + txt + "!\n I am glad to see you.", "Information", Messages.getInformationIcon());
         }
     }

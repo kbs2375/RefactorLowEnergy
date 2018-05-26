@@ -49,10 +49,27 @@
 
             <group id="NewRLE" popup="true" text="Refactor Low Energy (RLE)...">
                 <!-- 새로운 Refactor method를 위한 action 구성 -->
-                <action id="RefactorLowEnergy.method1" class="com.datarankings.plugins.rle.MethodA" text="_RefactorTest" description="RefactorTest" />
-                <action id="RefactorLowEnergy.method2" class="com.datarankings.plugins.rle.MethodB" text="_RefactorTest2" description="RefactorTest2" />
+                <action id="RefactorLowEnergy.ChangeReferenceToValue" class="com.datarankings.plugins.rle.ChangeReferenceToValue" text="Change Reference to Value" description="Change Reference to Value" />
+                <action id="RefactorLowEnergy.CollapseHierarchy" class="com.datarankings.plugins.rle.CollapseHierarchy" text="Collapse Hierarchy" description="Collapse Hierarchy" />
+                <action id="RefactorLowEnergy.ConsolidateDuplicateConditionalFragments" class="com.datarankings.plugins.rle.ConsolidateDuplicateConditionalFragments" text="Consolidate Duplicate Conditional Fragments" description="Consolidate Duplicate Conditional Fragments" />
 
+                <action id="RefactorLowEnergy.EncapsulateCollection" class="com.datarankings.plugins.rle.EncapsulateCollection" text="Encapsulate Collection" description="Encapsulate Collection" />
+                <action id="RefactorLowEnergy.IntroduceForeignMethod" class="com.datarankings.plugins.rle.IntroduceForeignMethod" text="Introduce Foreign Method" description="Introduce Foreign Method" />
+                <action id="RefactorLowEnergy.IntroduceNullObject" class="com.datarankings.plugins.rle.IntroduceNullObject" text="Introduce Null Object" description="Introduce Null Object" />
 
+                <action id="RefactorLowEnergy.ParameterizeMethod" class="com.datarankings.plugins.rle.ParameterizeMethod" text="Parameterize Method" description="Parameterize Method" />
+                <action id="RefactorLowEnergy.RemoveControlFlag" class="com.datarankings.plugins.rle.RemoveControlFlag" text="Remove Control Flag" description="Remove Control Flag" />
+                <action id="RefactorLowEnergy.RemoveMiddleMan" class="com.datarankings.plugins.rle.RemoveMiddleMan" text="Remove Middle Man" description="Remove Middle Man" />
+
+                <action id="RefactorLowEnergy.RemoveParameter" class="com.datarankings.plugins.rle.RemoveParameter" text="Remove Parameter" description="Remove Parameter" />
+                <action id="RefactorLowEnergy.RemoveSettingMethod" class="com.datarankings.plugins.rle.RemoveSettingMethod" text="Remove Setting Method" description="Remove Setting Method" />
+                <action id="RefactorLowEnergy.ReplaceDelegationWithInheritance" class="com.datarankings.plugins.rle.ReplaceDelegationWithInheritance" text="Replace Delegation with Inheritance" description="Replace Delegation with Inheritance" />
+
+                <action id="RefactorLowEnergy.ReplaceParameterWithMethod" class="com.datarankings.plugins.rle.ReplaceParameterWithMethod" text="Replace Parameter with Method" description="Replace Parameter with Method" />
+                <action id="RefactorLowEnergy.ReplaceSubclassWithFields" class="com.datarankings.plugins.rle.ReplaceSubclassWithFields" text="Replace Subclass with Fields" description="Replace Subclass with Fields" />
+                <action id="RefactorLowEnergy.SeparateQueryFromModifier" class="com.datarankings.plugins.rle.SeparateQueryFromModifier" text="Separate Query from Modifier" description="Separate Query from Modifier" />
+
+                <action id="RefactorLowEnergy.SplitTemporaryVariable" class="com.datarankings.plugins.rle.SplitTemporaryVariable" text="Split Temporary Variable" description="Split Temporary Variable" />
 
             </group>
 
